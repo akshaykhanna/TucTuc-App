@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Auto no." >
+        </EditText>
+
+        <Button
+          android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check" 
+        android:onClick="func_Check"
+        
+        android:gravity="center"/>
+
+    </LinearLayout>
+     <LinearLayout
+        android:id="@+id/ll_Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        
+        android:orientation="vertical"
+        android:padding="5dp" 
+        android:gravity="center">
+        
+        <TextView
+                  android:id="@+id/tv123"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Enter auto no. and find user review!"
+                  android:layout_marginTop="20dp"
+                  android:textAppearance="?android:attr/textAppearanceMedium" />
+         <Button
+    android:id="@+id/button4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="func_open";
+    android:text="Give your rating" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_thanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:padding="5dp" >
+        <TextView
+                  android:id="@+id/textView1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Thank you for feedback!"
+                  android:layout_marginTop="20dp"
+                  android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:padding="5dp" >
+        
+       
+
+           <RatingBar
+        android:id="@+id/ratingBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+           <TextView
+                  android:id="@+id/textView1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Bill type:"
+                  android:layout_marginTop="20dp"
+                  android:textAppearance="?android:attr/textAppearanceMedium" />
+          <RadioGroup 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     android:id="@+id/rgM">
+
+              
+
+    <RadioButton android:id="@+id/BillMeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meter"
+       />
+    <RadioButton android:id="@+id/BillNonMeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Non meter"
+        />
+    <RadioButton android:id="@+id/BillPrepaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prepaid"
+        />
+</RadioGroup>
+             <TextView
+                  android:id="@+id/textView1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Fare:"
+                  android:layout_marginTop="20dp"
+                  android:textAppearance="?android:attr/textAppearanceMedium" />
+          <RadioGroup 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/rgF"
+    
+    >
+    <RadioButton android:id="@+id/FareLess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Less then range"
+        />
+
+    
+
+    <RadioButton android:id="@+id/FareMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More than range"
+       />
+    <RadioButton android:id="@+id/FareRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In Range"
+        />
+</RadioGroup>
+     
+    </LinearLayout>
+<Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit" 
+        android:layout_alignParentBottom="true"
+        android:onClick="func_submit"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"/>
+
+
+</RelativeLayout>
